@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume | John Mark</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #333;
+    }
+
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+    }
+
+    header .links a {
+      color: #fff;
+      text-decoration: underline;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.6s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #4a90e2;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    ul li::marker {
+      color: #4a90e2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #e3e7ed;
+      margin-top: 3rem;
+      color: #444;
+    }
+
+    a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>John Mark Isaias</h1>
+    <p>Creative Tech Enthusiast | UI Designer | Video Editor</p>
+    <p>📧 johnmarkeisaias@gmail.com | 🌐 yourportfolio.com</p>
+    <div class="links">
+      <a href="https://www.behance.net/johndesigns2024" target="_blank">🎨 View My Work on Behance</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>A passionate creative with a growing skill set in video editing, web and UI design using tools like Figma. Experienced in spreadsheet tasks using Excel and always eager to learn new technologies and tools.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>🎬 Video Editing (CapCut, Premiere Pro)</li>
+      <li>📊 Microsoft Excel / Google Sheets</li>
+      <li>🎨 UI/UX Design (Figma)</li>
+      <li>🌐 Web Design (HTML, CSS)</li>
+      <li>🚀 Willing to Learn New Tools</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tools I Use</h2>
+    <ul>
+      <li>Figma</li>
+      <li>CapCut / Canva</li>
+      <li>Excel / Google Sheets</li>
+      <li>VS Code (basic HTML/CSS projects)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p><strong>BS in Information Technology</strong></p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: johnmarkeisaias@gmail.com</p>
+    <p>Portfolio: yourportfolio.com</p>
+    <p>Behance: <a href="https://www.behance.net/johndesigns2024" target="_blank">behance.net/johndesigns2024</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 John Mark. All rights reserved.
+  </footer>
+
+  <script>
+    // Smooth fade-in for sections
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
